@@ -10,6 +10,7 @@ services:
       - TZ=Indian/Reunion
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
     image: grafana/grafana:latest
     ports:
       - "80:3000"
