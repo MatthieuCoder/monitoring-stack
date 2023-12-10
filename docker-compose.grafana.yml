@@ -1,0 +1,20 @@
+version: "3"
+
+
+services:
+  grafana:
+    environment:
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - TZ=Indian/Reunion
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - loki
+    depends_on:
+      - mimir-lb
+      - loki-gateway

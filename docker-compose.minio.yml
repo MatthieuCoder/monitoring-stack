@@ -1,0 +1,25 @@
+version: "3"
+
+networks:
+  loki:
+
+services:
+  minio:
+    image: minio/minio
+    environment:
+      - MINIO_ROOT_USER=admin
+      - TZ=Indian/Reunion
+    env_file:
+      - .env
+    command:
+      - server
+      - /data
+      - --console-address
+      - :9001
+    volumes:
+      - ./store/minio:/data
+    ports:
+      - 9000:9000
+      - 9001:9001
+    networks:
+      - loki

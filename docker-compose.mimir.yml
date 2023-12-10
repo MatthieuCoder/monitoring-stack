@@ -1,0 +1,96 @@
+version: "3"
+
+services:
+  minio_mimir_createjob:
+    image: minio/mc
+    depends_on:
+      - minio
+    networks:
+      - loki
+    env_file:
+      - .env
+    volumes:
+      - ./loki/policy.json:/policies/loki.json
+      - ./mimir/policy.json:/policies/mimir.json
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc config host add minio http://minio:9000 admin $MINIO_ROOT_PASSWORD;
+      /usr/bin/mc admin user add minio mimir $MIMIR_PASSWORD;
+      /usr/bin/mc mb minio/mimir-blocks;
+      /usr/bin/mc mb minio/mimir-alertmanager;
+      /usr/bin/mc mb minio/mimir-ruler;
+      /usr/bin/mc admin policy create minio mimir /policies/mimir.json;
+      /usr/bin/mc admin policy attach minio mimir --user mimir;
+
+      exit 0;
+      "
+
+  mimir-lb:
+    image: nginx
+    volumes:
+      - ./mimir/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - "mimir-0"
+      - "mimir-1"
+      - "mimir-2"
+    ports:
+      - 9009:9009
+    environment:
+      - TZ=Indian/Reunion
+    networks:
+      - loki
+
+  mimir-0:
+    image: grafana/mimir
+    command:
+      - -config.file=/etc/mimir.yaml
+      - -config.expand-env=true
+    environment:
+      - MIMIR_PASSWORD=${MIMIR_PASSWORD}
+      - TZ=Indian/Reunion
+    hostname: mimir-0
+    depends_on:
+      - minio
+    volumes:
+      - ./mimir/config.yaml:/etc/mimir.yaml
+      - ./mimir/alertmanager-fallback-config.yaml:/etc/alertmanager-fallback-config.yaml
+      - ./store/mimir/0:/data
+    networks:
+      - loki
+
+  mimir-1:
+    image: grafana/mimir
+    command:
+      - -config.file=/etc/mimir.yaml
+      - -config.expand-env=true
+    environment:
+      - MIMIR_PASSWORD=${MIMIR_PASSWORD}
+      - TZ=Indian/Reunion
+    hostname: mimir-1
+    depends_on:
+      - minio
+    volumes:
+      - ./mimir/config.yaml:/etc/mimir.yaml
+      - ./mimir/alertmanager-fallback-config.yaml:/etc/alertmanager-fallback-config.yaml
+      - ./store/mimir/1:/data
+    networks:
+      - loki
+
+  mimir-2:
+    image: grafana/mimir
+    command:
+      - -config.file=/etc/mimir.yaml
+      - -config.expand-env=true
+    environment:
+      - MIMIR_PASSWORD=${MIMIR_PASSWORD}
+      - TZ=Indian/Reunion
+    hostname: mimir-2
+    depends_on:
+      - minio
+    volumes:
+      - ./mimir/config.yaml:/etc/mimir.yaml
+      - ./mimir/alertmanager-fallback-config.yaml:/etc/alertmanager-fallback-config.yaml
+      - ./store/mimir/2:/data
+    networks:
+      - loki
+

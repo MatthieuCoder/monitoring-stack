@@ -1,0 +1,15 @@
+services:
+  fluentd:
+    image: grafana/fluent-plugin-loki:main
+    volumes:
+     - ./fluentd/config.conf:/fluentd/etc/fluent.conf
+    environment:
+     - LOKI_URL=http://loki-gateway
+     - TZ=Indian/Reunion
+    networks:
+     - loki
+    depends_on:
+     - loki-gateway
+    ports:
+     - 514:514/udp
+     - 24224:24224

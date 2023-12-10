@@ -1,0 +1,18 @@
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --web.console.libraries=/usr/share/prometheus/console_libraries
+      - --web.console.templates=/usr/share/prometheus/consoles
+    volumes:
+      - ./prometheus/config.yaml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - "mimir-0"
+      - "mimir-1"
+      - "mimir-2"
+    networks:
+      - loki
+    ports:
+      - 9090:9090

@@ -1,0 +1,100 @@
+ 
+version: "3"
+
+services:
+  minio_loki_createjob:
+    image: minio/mc
+    depends_on:
+      - minio
+    networks:
+      - loki
+    env_file:
+      - .env
+    volumes:
+      - ./loki/policy.json:/policies/loki.json
+      - ./mimir/policy.json:/policies/mimir.json
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc config host add minio http://minio:9000 admin $MINIO_ROOT_PASSWORD;
+      /usr/bin/mc admin user add minio loki $LOKI_PASSWORD;
+      /usr/bin/mc mb minio/loki;
+      /usr/bin/mc admin policy create minio loki /policies/loki.json;
+      /usr/bin/mc admin policy attach minio loki --user loki;
+      exit 0;
+      "
+
+  loki-init:
+    image: &lokiImage grafana/loki
+    user: root
+    entrypoint: chown 10001:10001 /loki
+    volumes:
+      - ./store/loki:/loki
+    networks:
+      - loki
+
+  loki-gateway:
+    image: nginx
+    volumes:
+      - ./loki/nginx.conf:/etc/nginx/nginx.conf:ro
+    environment:
+      - TZ=Indian/Reunion
+    ports:
+      - 8080:80
+      - "3100"
+    networks:
+      - loki
+
+  loki-read:
+    image: *lokiImage
+    volumes:
+      - ./loki/config.yaml:/etc/loki/loki.yaml:ro
+      - ./loki/rules:/loki/rules:ro
+    ports:
+      - "3100"
+      - "7946"
+    command: "-config.file=/etc/loki/loki.yaml -target=read -config.expand-env=true"
+    networks:
+      - loki
+    environment:
+      - LOKI_PASSWORD=${LOKI_PASSWORD}
+      - TZ=Indian/Reunion
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 3
+
+  loki-write:
+    image: *lokiImage
+    volumes:
+      - ./loki/config.yaml:/etc/loki/loki.yaml:ro
+    ports:
+      - "3100"
+      - "7946"
+    command: "-config.file=/etc/loki/loki.yaml -target=write -config.expand-env=true"
+    networks:
+      - loki
+    environment:
+      - LOKI_PASSWORD=${LOKI_PASSWORD}
+      - TZ=Indian/Reunion
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 3
+
+  loki-backend:
+    image: *lokiImage
+    volumes:
+      - ./loki/config.yaml:/etc/loki/loki.yaml:ro
+    ports:
+      - "3100"
+      - "7946"
+    command: "-config.file=/etc/loki/loki.yaml -target=backend -legacy-read-mode=false -config.expand-env=true"
+    networks:
+      - loki
+    environment:
+      - LOKI_PASSWORD=${LOKI_PASSWORD}
+      - TZ=Indian/Reunion
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 3
