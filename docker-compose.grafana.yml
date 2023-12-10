@@ -9,7 +9,7 @@ services:
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - TZ=Indian/Reunion
     volumes:
-      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
     image: grafana/grafana:latest
     ports:
       - "3000:3000"

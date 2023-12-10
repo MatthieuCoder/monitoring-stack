@@ -1,0 +1,9 @@
+services:
+    mktxp:
+        image: ghcr.io/akpw/mktxp:latest
+        user: root
+        volumes:
+          - './mktxp:/root/mktxp'
+        networks:
+          - loki
+        restart: unless-stopped

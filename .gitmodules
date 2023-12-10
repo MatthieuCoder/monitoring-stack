@@ -1,0 +1,9 @@
+[submodule "ext/loki"]
+	path = ext/loki
+	url = git@github.com:grafana/loki.git
+[submodule "ext/grafana"]
+	path = ext/grafana
+	url = git@github.com:grafana/grafana.git
+[submodule "ext/mimir"]
+	path = ext/mimir
+	url = git@github.com:grafana/mimir.git
