@@ -61,10 +61,7 @@
   "panels": [
     {
       "collapsed": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "E1M7U50Gz"
-      },
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -75,10 +72,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -86,10 +80,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -148,10 +139,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_identity_info{routerboard_name=\"$node\"}  ",
           "instant": true,
@@ -164,10 +152,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -226,10 +211,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_uptime{routerboard_name=\"$node\"}",
           "instant": true,
@@ -242,10 +224,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -341,10 +320,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_installed_packages_info{routerboard_name=\"$node\"}",
           "format": "table",
@@ -391,10 +367,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "decimals": 1,
@@ -463,10 +436,7 @@
           "application": {
             "filter": "Memory"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "(1 - mktxp_system_free_memory{routerboard_name=\"$node\"} / mktxp_system_total_memory{routerboard_name=\"$node\"})*100",
           "format": "time_series",
@@ -492,10 +462,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_cpu_load{routerboard_name=\"$node\"}",
           "instant": true,
@@ -504,10 +471,7 @@
           "refId": "C"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "(1 - mktxp_system_free_hdd_space{routerboard_name=\"$node\"} / mktxp_system_total_hdd_space{routerboard_name=\"$node\"})*100",
           "instant": true,
@@ -519,10 +483,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -610,10 +571,7 @@
           "application": {
             "filter": "CPU"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_cpu_load{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -642,10 +600,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -800,10 +755,7 @@
           "application": {
             "filter": "Memory"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_cpu_frequency{routerboard_name=\"$node\"}*1000000",
           "format": "time_series",
@@ -832,10 +784,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -879,10 +828,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "exemplar": false,
           "expr": "mktxp_system_cpu_frequency{routerboard_name=\"$node\"}*1000000",
@@ -897,10 +843,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "mappings": [],
@@ -958,10 +901,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_routerboard_temperature{routerboard_name=\"$node\"}  ",
           "instant": true,
@@ -970,10 +910,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_cpu_temperature{routerboard_name=\"$node\"}  ",
           "hide": false,
@@ -986,10 +923,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1050,10 +984,7 @@
           "application": {
             "filter": "General"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_uptime{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -1079,10 +1010,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_update_available{routerboard_name=\"$node\"}",
           "hide": false,
@@ -1096,10 +1024,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1160,10 +1085,7 @@
           "application": {
             "filter": "General"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_uptime{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -1193,10 +1115,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1297,10 +1216,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_active_users_info{routerboard_name=\"$node\"}",
           "format": "table",
@@ -1348,10 +1264,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1504,10 +1417,7 @@
           "application": {
             "filter": "Memory"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_total_hdd_space{routerboard_name=\"$node\"} - mktxp_system_free_hdd_space{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -1535,10 +1445,7 @@
           "application": {
             "filter": "Memory"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_total_hdd_space{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -1567,10 +1474,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1622,10 +1526,7 @@
           "application": {
             "filter": "General"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_system_routerboard_voltage{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -1655,10 +1556,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1717,10 +1615,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_public_ip_address_info{routerboard_name=\"$node\"}",
           "instant": true,
@@ -1733,10 +1628,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1795,10 +1687,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_public_ip_address_info{routerboard_name=\"$node\"}",
           "instant": true,
@@ -1807,10 +1696,7 @@
           "refId": "B"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_public_ip_address_info{routerboard_name=\"$node\"}",
           "hide": false,
@@ -1825,10 +1711,7 @@
     },
     {
       "collapsed": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "E1M7U50Gz"
-      },
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1839,10 +1722,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -1850,10 +1730,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1911,10 +1788,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_ip_pool_used{routerboard_name=\"$node\"} ",
           "format": "time_series",
@@ -1944,10 +1818,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2079,10 +1950,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_dhcp_lease_info{routerboard_name=\"$node\"}",
           "format": "table",
@@ -2134,10 +2002,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2195,10 +2060,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_dhcp_lease_active_count{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -2228,10 +2090,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2288,10 +2147,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "sum(mktxp_dhcp_lease_active_count{routerboard_name=\"$node\"})",
           "format": "time_series",
@@ -2322,10 +2178,7 @@
     },
     {
       "collapsed": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "E1M7U50Gz"
-      },
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2336,10 +2189,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -2347,10 +2197,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2410,10 +2257,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_routes_total_routes{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -2427,10 +2271,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "links": [],
@@ -2480,10 +2321,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_routes_protocol_count{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -2513,10 +2351,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2579,10 +2414,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_interface_full_duplex{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -2596,10 +2428,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2694,10 +2523,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_interface_rx_error_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -2723,10 +2549,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_interface_tx_error_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -2742,10 +2565,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2808,10 +2628,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_interface_status{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -2825,10 +2642,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {
@@ -2878,10 +2692,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_interface_rate{routerboard_name=\"$node\"}",
           "format": "table",
@@ -2919,10 +2730,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -3052,10 +2860,7 @@
       "pluginVersion": "10.0.1",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_poe_info{routerboard_name=\"$node\"}",
           "format": "table",
@@ -3110,10 +2915,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -3231,10 +3033,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_interface_rx_byte_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
@@ -3263,10 +3062,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_interface_tx_byte_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
@@ -3297,10 +3093,7 @@
     },
     {
       "collapsed": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "E1M7U50Gz"
-      },
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -3311,10 +3104,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -3322,10 +3112,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -3436,10 +3223,7 @@
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_connection_stats{routerboard_name=\"$node\"}",
           "format": "table",
@@ -3486,10 +3270,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -3582,10 +3363,7 @@
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "exemplar": false,
           "expr": "mktxp_connection_stats{routerboard_name=\"$node\"}",
@@ -3600,10 +3378,7 @@
       "type": "barchart"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -3689,10 +3464,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_firewall_filter_total{routerboard_name=\"$node\", log=\"1\"}[4m])*8",
           "format": "time_series",
@@ -3722,10 +3494,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -3811,10 +3580,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_firewall_raw_total{routerboard_name=\"$node\", log=\"1\"}[4m])*8",
           "format": "time_series",
@@ -3844,10 +3610,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -3933,10 +3696,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_firewall_filter_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
@@ -3966,10 +3726,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -4055,10 +3812,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_firewall_raw_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
@@ -4089,10 +3843,7 @@
     },
     {
       "collapsed": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "E1M7U50Gz"
-      },
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -4103,10 +3854,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -4141,10 +3889,7 @@
           }
         ]
       },
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "gridPos": {
         "h": 8,
@@ -4171,10 +3916,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "max_over_time(mktxp_netwatch_status{routerboard_name=\"$node\"}[1m])",
           "format": "time_series",
@@ -4230,10 +3972,7 @@
       }
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4323,10 +4062,7 @@
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_netwatch_info{routerboard_name=\"$node\"}",
           "format": "table",
@@ -4385,10 +4121,7 @@
     },
     {
       "collapsed": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "E1M7U50Gz"
-      },
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -4399,10 +4132,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -4414,10 +4144,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -4463,10 +4190,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_wlan_noise_floor{routerboard_name=\"$node\"}",
           "interval": "",
@@ -4513,10 +4237,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "decimals": 2,
       "fieldConfig": {
         "defaults": {
@@ -4563,10 +4284,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_wlan_overall_tx_ccq{routerboard_name=\"$node\"}",
           "instant": false,
@@ -4610,10 +4328,7 @@
       }
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4729,10 +4444,7 @@
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_wlan_clients_devices_info{routerboard_name=\"$node\"}",
           "format": "table",
@@ -4783,10 +4495,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "decimals": 0,
       "fieldConfig": {
         "defaults": {
@@ -4833,10 +4542,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_wlan_registered_clients{routerboard_name=\"$node\"}",
           "interval": "",
@@ -4883,10 +4589,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "decimals": 0,
       "description": "",
       "fieldConfig": {
@@ -4935,10 +4638,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_wlan_clients_tx_ccq{routerboard_name=\"$node\"}",
           "instant": false,
@@ -4988,10 +4688,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "editable": true,
       "error": false,
@@ -5057,10 +4754,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_wlan_clients_tx_bytes_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -5089,10 +4783,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_wlan_clients_rx_bytes_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -5156,10 +4847,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "decimals": 0,
       "fieldConfig": {
         "defaults": {
@@ -5212,10 +4900,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_wlan_clients_signal_strength{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -5278,10 +4963,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "links": [],
@@ -5333,10 +5015,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_wlan_clients_signal_to_noise{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -5396,10 +5075,7 @@
     },
     {
       "collapsed": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "E1M7U50Gz"
-      },
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -5410,10 +5086,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -5421,10 +5094,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {
@@ -5511,10 +5181,7 @@
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_capsman_remote_caps_info{routerboard_name=\"$node\"}",
           "format": "table",
@@ -5558,10 +5225,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -5677,10 +5341,7 @@
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_capsman_clients_devices_info{routerboard_name=\"$node\"}",
           "format": "table",
@@ -5729,10 +5390,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -5788,10 +5446,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_capsman_registrations_count{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -5817,10 +5472,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "sum(mktxp_capsman_registrations_count{routerboard_name=\"$node\"})",
           "instant": true,
@@ -5833,10 +5485,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -5901,10 +5550,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_capsman_clients_signal_strength{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -5938,10 +5584,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "links": [],
@@ -5993,10 +5636,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_capsman_clients_signal_strength{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -6057,10 +5697,7 @@
       }
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -6177,10 +5814,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_capsman_clients_tx_bytes_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
@@ -6209,10 +5843,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_capsman_clients_rx_bytes_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
@@ -6255,10 +5886,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -6356,10 +5984,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_queue_simple_rates_download_total{routerboard_name=\"$node\"}*8",
           "format": "time_series",
@@ -6388,10 +6013,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_queue_simple_rates_upload_total{routerboard_name=\"$node\"}*8",
           "format": "time_series",
@@ -6421,10 +6043,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -6524,10 +6143,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_queue_simple_bytes_download_total{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -6556,10 +6172,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_queue_simple_bytes_upload_total{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -6589,10 +6202,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -6692,10 +6302,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_queue_simple_queued_bytes_upload_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -6724,10 +6331,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_queue_simple_queued_bytes_upload_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -6757,10 +6361,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -6860,10 +6461,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_queue_simple_dropped_download_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -6892,10 +6490,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_queue_simple_dropped_upload_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -6938,10 +6533,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -7039,10 +6631,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_queue_tree_rates_total{routerboard_name=\"$node\"}*8",
           "format": "time_series",
@@ -7072,10 +6661,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -7175,10 +6761,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "mktxp_queue_tree_bytes_total{routerboard_name=\"$node\"}",
           "format": "time_series",
@@ -7208,10 +6791,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -7311,10 +6891,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_queue_tree_queued_bytes_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -7344,10 +6921,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -7447,10 +7021,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_queue_tree_dropped_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -7481,10 +7052,7 @@
     },
     {
       "collapsed": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "E1M7U50Gz"
-      },
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -7495,10 +7063,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -7506,10 +7071,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -7570,10 +7132,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_collection_time_total{routerboard_name=\"$node\"}[4m])  ",
           "format": "time_series",
@@ -7603,10 +7162,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -7689,10 +7245,7 @@
           "application": {
             "filter": "Network"
           },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "rate(mktxp_collection_time_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
@@ -7718,10 +7271,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "expr": "sum(rate(mktxp_collection_time_total{routerboard_name=\"$node\"}[4m]))",
           "interval": "",
@@ -7734,10 +7284,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -7819,10 +7366,7 @@
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "expr": "mktxp_internet_bandwidth",
           "instant": false,
           "interval": "",
@@ -7834,10 +7378,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -7919,10 +7460,7 @@
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "$datasource",
           "expr": "mktxp_internet_latency",
           "instant": false,
           "interval": "",
@@ -7945,14 +7483,25 @@
     "list": [
       {
         "current": {
+          "text": "default",
+          "value": "default"
+        },
+        "hide": 0,
+        "label": "Data Source",
+        "name": "datasource",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "",
+        "type": "datasource"
+      },
+      {
+        "current": {
           "selected": false,
           "text": "MKT-GT-PD",
           "value": "MKT-GT-PD"
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "PBFA97CFB590B2093"
-        },
+        "datasource": "$datasource",
         "definition": "label_values(mktxp_system_identity_info, routerboard_name)",
         "hide": 0,
         "includeAll": false,
@@ -7974,10 +7523,7 @@
         "useTags": false
       },
       {
-        "datasource": {
-          "type": "prometheus",
-          "uid": "PBFA97CFB590B2093"
-        },
+        "datasource": "$datasource",
         "filters": [],
         "hide": 0,
         "name": "Filters",
