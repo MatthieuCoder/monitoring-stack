@@ -15,4 +15,4 @@ services:
     networks:
       - loki
     ports:
-      - 9090:9090
+      - "9090"

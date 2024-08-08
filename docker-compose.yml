@@ -15,7 +15,6 @@ services:
       - loki-gateway
     ports:
       - 514:514/udp
-      - 24224:24224
   grafana:
     environment:
       - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
@@ -27,7 +26,7 @@ services:
       - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
     image: grafana/grafana:latest
     ports:
-      - "80:3000"
+      - "8091:3000"
     networks:
       - loki
     depends_on:
@@ -62,7 +61,7 @@ services:
     environment:
       - TZ=Indian/Reunion
     ports:
-      - 8080:80
+      - "80"
       - "3100"
     networks:
       - loki
@@ -143,7 +142,7 @@ services:
       - "mimir-1"
       - "mimir-2"
     ports:
-      - 9009:9009
+      - "9009"
     environment:
       - TZ=Indian/Reunion
     networks:
@@ -214,18 +213,10 @@ services:
     volumes:
       - ./store/minio:/data
     ports:
-      - 9000:9000
-      - 9001:9001
+      - "9000"
+      - "9001"
     networks:
       - loki
-  mktxp:
-    image: ghcr.io/akpw/mktxp:latest
-    user: root
-    volumes:
-      - './mktxp:/root/mktxp'
-    networks:
-      - loki
-    restart: unless-stopped
   prometheus:
     image: prom/prometheus:latest
     command:
@@ -242,4 +233,4 @@ services:
     networks:
       - loki
     ports:
-      - 9090:9090
+      - "9090"
