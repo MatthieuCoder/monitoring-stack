@@ -12,4 +12,3 @@ services:
      - loki-gateway
     ports:
      - 514:514/udp
-     - 24224:24224

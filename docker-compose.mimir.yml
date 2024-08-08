@@ -34,7 +34,7 @@ services:
       - "mimir-1"
       - "mimir-2"
     ports:
-      - 9009:9009
+      - "9009"
     environment:
       - TZ=Indian/Reunion
     networks:

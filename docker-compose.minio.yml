@@ -19,7 +19,7 @@ services:
     volumes:
       - ./store/minio:/data
     ports:
-      - 9000:9000
-      - 9001:9001
+      - "9000"
+      - "9001"
     networks:
       - loki
