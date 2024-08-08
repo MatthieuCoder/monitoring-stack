@@ -5,7 +5,7 @@ services:
   grafana:
     environment:
       - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
-      - TZ=Indian/Reunion
+      - TZ=Etc/UTC
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning:ro
       - ./grafana/dashboards:/var/lib/grafana/dashboards:ro

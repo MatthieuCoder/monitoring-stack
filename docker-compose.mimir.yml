@@ -36,7 +36,7 @@ services:
     ports:
       - "9009"
     environment:
-      - TZ=Indian/Reunion
+      - TZ=Etc/UTC
     networks:
       - loki
 
@@ -47,7 +47,7 @@ services:
       - -config.expand-env=true
     environment:
       - MIMIR_PASSWORD=${MIMIR_PASSWORD}
-      - TZ=Indian/Reunion
+      - TZ=Etc/UTC
     hostname: mimir-0
     depends_on:
       - minio
@@ -65,7 +65,7 @@ services:
       - -config.expand-env=true
     environment:
       - MIMIR_PASSWORD=${MIMIR_PASSWORD}
-      - TZ=Indian/Reunion
+      - TZ=Etc/UTC
     hostname: mimir-1
     depends_on:
       - minio
@@ -83,7 +83,7 @@ services:
       - -config.expand-env=true
     environment:
       - MIMIR_PASSWORD=${MIMIR_PASSWORD}
-      - TZ=Indian/Reunion
+      - TZ=Etc/UTC
     hostname: mimir-2
     depends_on:
       - minio

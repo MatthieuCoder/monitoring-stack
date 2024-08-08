@@ -5,7 +5,7 @@ services:
      - ./fluentd/config.conf:/fluentd/etc/fluent.conf
     environment:
      - LOKI_URL=http://loki-gateway
-     - TZ=Indian/Reunion
+     - TZ=Etc/UTC
     networks:
      - loki
     depends_on:
